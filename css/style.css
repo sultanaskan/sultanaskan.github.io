@@ -10,3 +10,15 @@
 .about-container{
     background-color: #01BBBD;
 }
+.education.container{
+    background-color: #E0DFE1;
+}
+.circle{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: #f89088;
+    margin: auto;
+    justify-items: center;
+    
+} 
