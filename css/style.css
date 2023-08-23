@@ -9,13 +9,13 @@
     background-attachment: fixed;
 }
 .banner-color{
-    background-color: #50505068;
+    background-color: #50505029;
 }
 .navbar-container{
     background: rgb(19, 19, 19);
 }
 .about-container{
-    background-color: #01BBBD;
+    background-color: #027678;
 }
 .education.container{
     background-color: #E0DFE1;
@@ -84,4 +84,11 @@
     background-image: linear-gradient(to top, rgba(0, 255, 238, 0.308), transparent);
     z-index: 1;
 }
+.cv{
+    background-color: #2f34350f;
+    border-radius: 50px;
+}
+
+
+
 
