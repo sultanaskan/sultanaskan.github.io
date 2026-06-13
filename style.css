@@ -1,0 +1,423 @@
+/* --- FRAMER RESUMEFLOW PREMIUM DESIGN THEME --- */
+:root {
+    --bg-color: #000000;
+    --text-main: #f3f4f6;
+    --text-muted: #8e8e93;
+    --text-dim: #48484a;
+    --accent: #ffffff;
+    --border-color: #1c1c1e;
+    --font-sans: 'Inter', sans-serif;
+    --font-mono: 'Fira Code', monospace;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: var(--bg-color);
+}
+
+body {
+    color: var(--text-main);
+    font-family: var(--font-sans);
+    background-color: var(--bg-color);
+    -webkit-font-smoothing: antialiased;
+}
+
+.font-mono {
+    font-family: var(--font-mono);
+}
+
+/* --- APP LAYOUT --- */
+.app-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+    .app-container {
+        flex-direction: row;
+        gap: 4rem;
+        padding: 0 2rem;
+    }
+}
+
+/* --- SIDEBAR (FIXED LEFT COLUMN) --- */
+.sidebar {
+    padding: 4rem 1.5rem 2rem 1.5rem;
+}
+
+@media (min-width: 1024px) {
+    .sidebar {
+        width: 40%;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+        padding: 6rem 0;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.sidebar-sticky {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.profile-status {
+    font-size: 0.75rem;
+    color: #34c759;
+    letter-spacing: 0.05em;
+    margin-bottom: 1.5rem;
+}
+
+.sidebar h1 {
+    font-size: 2.75rem;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+}
+
+.sidebar h2 {
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: var(--text-main);
+    margin-bottom: 1.5rem;
+}
+
+.sidebar .bio {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    max-width: 340px;
+}
+
+/* SIDEBAR NAV (RESUMEFLOW SPECIFIC) */
+.nav-links {
+    display: none;
+}
+
+@media (min-width: 1024px) {
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin: 3rem 0;
+    }
+}
+
+.nav-item {
+    color: var(--text-dim);
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: color 0.2s, padding-left 0.2s;
+}
+
+.nav-item span {
+    font-size: 0.7rem;
+    color: var(--text-dim);
+}
+
+.nav-item:hover,
+.nav-item.active {
+    color: var(--accent);
+    padding-left: 0.5rem;
+}
+
+.nav-item:hover span,
+.nav-item.active span {
+    color: var(--text-muted);
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--accent);
+    color: #000;
+    padding: 0.75rem 1.5rem;
+    border-radius: 2rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: transform 0.2s;
+}
+
+.cta-button:hover {
+    transform: scale(1.03);
+}
+
+/* --- CONTENT AREA (SCROLLABLE RIGHT COLUMN) --- */
+.content-area {
+    padding: 2rem 1.5rem;
+}
+
+@media (min-width: 1024px) {
+    .content-area {
+        width: 60%;
+        padding: 6rem 0;
+    }
+}
+
+.content-section {
+    margin-bottom: 5rem;
+}
+
+.large-text {
+    font-size: 1.35rem;
+    line-height: 1.6;
+    color: #f3f4f6;
+    font-weight: 300;
+}
+
+.large-text strong {
+    color: #fff;
+    font-weight: 500;
+}
+
+.section-title {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.75rem;
+    margin-bottom: 2.5rem;
+}
+
+/* TIMELINE STYLING */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.timeline-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+@media (min-width: 640px) {
+    .timeline-item {
+        flex-direction: row;
+    }
+}
+
+.timeline-item .time {
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    min-width: 120px;
+    padding-top: 0.25rem;
+}
+
+.timeline-item h4 {
+    font-size: 1.1rem;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-item h4 .company {
+    color: var(--text-muted);
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.timeline-item p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+}
+
+.tech-tags {
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    word-spacing: 0.1em;
+}
+
+/* PROJECT LIST STYLING */
+.project-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-row {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid var(--border-color);
+    padding: 1.5rem 0;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    transition: border-color 0.2s;
+}
+
+@media (min-width: 640px) {
+    .project-row {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+}
+
+.project-row:hover {
+    border-color: var(--text-muted);
+}
+
+.project-meta {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    min-width: 250px;
+}
+
+.project-year {
+    font-size: 0.75rem;
+    color: var(--text-dim);
+}
+
+.project-row h4 {
+    font-size: 1.05rem;
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.project-row:hover h4 {
+    color: var(--accent);
+}
+
+.project-desc {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    flex-grow: 1;
+    line-height: 1.5;
+    margin-top: 0.5rem;
+}
+
+@media (min-width: 640px) {
+    .project-desc {
+        margin-top: 0;
+    }
+}
+
+.project-arrow {
+    display: none;
+    font-size: 1.1rem;
+    color: var(--text-dim);
+}
+
+@media (min-width: 640px) {
+    .project-arrow {
+        display: block;
+    }
+}
+
+.project-row:hover .project-arrow {
+    color: var(--accent);
+}
+
+/* EXPERTISE STYLING */
+.skills-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.skills-cat h5 {
+    font-size: 0.9rem;
+    color: #fff;
+    margin-bottom: 0.35rem;
+    font-weight: 600;
+}
+
+.skills-cat p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+/* FOOTER */
+.main-footer {
+    border-top: 1px solid var(--border-color);
+    padding-top: 2rem;
+    margin-top: 6rem;
+}
+
+.main-footer p {
+    font-size: 0.7rem;
+    color: var(--text-dim);
+}
+
+
+
+
+
+/* --- PROFILE IMAGE PLACEHOLDER STYLING --- */
+.profile-image-container {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+/* আসল ছবি আপলোড করলে সেটার স্টাইল */
+.profile-avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    /* ছবি গোল করার জন্য */
+    object-fit: cover;
+    border: 1px solid var(--border-color);
+    display: block;
+}
+
+/* যদি ছবি না থাকে, তবে নামের প্রথম অক্ষর (SA) দিয়ে এই চমৎকার মিনিমালিস্ট হোল্ডারটি দেখাবে */
+.profile-placeholder {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #1c1c1e;
+    /* ডার্ক গ্রে ব্যাকগ্রাউন্ড */
+    border: 1px solid #2c2c2e;
+    display: none;
+    /* ডিফল্টভাবে লুকানো থাকবে যদি আসল ছবি থাকে */
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-mono);
+}
+
+.profile-placeholder span {
+    color: var(--text-main);
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: -0.05em;
+}
+
+/* রেসপন্সিভ অ্যাডজাস্টমেন্ট: বড় স্ক্রিনে ছবি একটু বড় দেখাবে */
+@media (min-width: 1024px) {
+    .profile-image-container {
+        width: 96px;
+        height: 96px;
+        margin-bottom: 2rem;
+    }
+}
